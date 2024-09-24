@@ -1,2 +1,6 @@
 # My-Portfolio
 I built a clean, responsive portfolio using HTML and CSS, showcasing my academic background, projects, and skills. It features intuitive navigation, linking to detailed descriptions of my machine learning and web development work. The design is minimalistic and user-friendly, ensuring smooth performance across devices.
+
+The portfolio project I created using HTML and CSS showcases my skills and experience in web development and machine learning. The website features a clean, responsive design, with intuitive navigation and structured sections for About Me, Projects, Education, Experience, Skills and Contact Me. It highlights my journey as a developer, presenting my academic background, the projects I’ve worked on, and certifications I’ve earned. By utilizing CSS for styling, I ensured the site’s aesthetic appeal while keeping it user-friendly.
+
+Each project displayed on the portfolio links to detailed descriptions, including my work on machine learning models, web applications, and internships. The minimalistic design helps maintain focus on the content, while the responsive elements ensure smooth functionality across devices, emphasizing my proficiency in front-end technologies.
