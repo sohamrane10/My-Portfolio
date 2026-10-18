@@ -1,6 +1,15 @@
-# My-Portfolio
-I built a clean, responsive portfolio using HTML and CSS, showcasing my academic background, projects, and skills. It features intuitive navigation, linking to detailed descriptions of my machine learning and web development work. The design is minimalistic and user-friendly, ensuring smooth performance across devices.
+# Soham Rane — Portfolio
 
-The portfolio project I created using HTML and CSS showcases my skills and experience in web development and machine learning. The website features a clean, responsive design, with intuitive navigation and structured sections for About Me, Projects, Education, Experience, Skills and Contact Me. It highlights my journey as a developer, presenting my academic background, the projects I’ve worked on, and certifications I’ve earned. By utilizing CSS for styling, I ensured the site’s aesthetic appeal while keeping it user-friendly.
+A responsive, single-page portfolio for AI/ML engineer Soham Rane. It is built with plain HTML, CSS, and JavaScript and is published with GitHub Pages from the repository root on `main`.
 
-Each project displayed on the portfolio links to detailed descriptions, including my work on machine learning models, web applications, and internships. The minimalistic design helps maintain focus on the content, while the responsive elements ensure smooth functionality across devices, emphasizing my proficiency in front-end technologies.
+## Run locally
+
+Open `index.html` in a browser or serve the repository root with any static HTTP server. The theme and reduced-motion settings are saved in the browser.
+
+## Site structure
+
+- `index.html` contains the portfolio sections and anchor navigation.
+- `portfolio.css` provides the dark-first, light/dark responsive design and reduced-motion styles.
+- `script.js` handles navigation, appearance settings, and scroll reveals.
+- `assets/images/` contains portfolio and achievement images.
+- `assets/certificates/` contains the resume and public certificate PDFs linked from the site.
