@@ -22,7 +22,7 @@
         <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="achievements.html">Achievements</a>
             <a href="#education">Education</a>
             <a href="achievements.html#courses">Courses</a>
@@ -61,7 +61,7 @@
                 <div class="hero-note"><span class="note-marker" aria-hidden="true">✳</span><span>Curious by nature.<br>Focused on useful AI.</span></div>
             </div>
             <div class="hero-metrics" aria-label="Highlights" data-reveal>
-                <a class="metric" href="#achievements"><span class="metric-value">AI/ML</span><span class="metric-label">Domain winner · 3rd overall at Techvanza ’26</span></a>
+                <a class="metric" href="projects.html#rapidreach"><span class="metric-value">AI/ML</span><span class="metric-label">Domain winner · 3rd overall at Techvanza ’26</span></a>
                 <a class="metric" href="#experience"><span class="metric-value">Ross Warner</span><span class="metric-label">AI/ML internship · 2025–26</span></a>
                 <a class="metric" href="https://certs.duolingo.com/9vg5alfbklqni0ta" target="_blank" rel="noopener noreferrer"><span class="metric-value">135<span class="metric-unit">/160</span></span><span class="metric-label">Duolingo English Test · C1 · Verify ↗</span></a>
                 <a class="metric" href="#education"><span class="metric-value">7.83</span><span class="metric-label">B.E. CGPA / 10 · Final-sem SGPI 9.71</span></a>
@@ -159,63 +159,8 @@
                             <li>Implemented database integrations and structured logging to automate tasks and improve data tracking.</li>
                             <li>Contributed to model development, candidate-data analysis, and research into practical AI applications for HR.</li>
                         </ul>
-                        <details class="technical-report experience-report">
-                            <summary>Explore platform features, technology, and documents</summary>
-                            <div class="report-sections">
-                                <section class="report-section" aria-labelledby="ross-features-title">
-                                    <p class="project-kicker">01 / FEATURES</p>
-                                    <h4 id="ross-features-title">Three connected HR platforms</h4>
-                                    <h5>RossAI · recruitment and interview intelligence</h5>
-                                    <ul>
-                                        <li><strong>AI Job Architect:</strong> Deterministic prompt design creates ready-to-publish HTML job descriptions from salary, technology, and reporting-line inputs; it also generates candidate outreach and LinkedIn posts. Perplexity Sonar Online can research a company to fill in missing culture, history, and benefits.</li>
-                                        <li><strong>CV screening:</strong> Reads PDF and Word CVs with pypdf and python-docx, and uses Llama 3.2 Vision through Groq for image-based CVs. Extraction logs support troubleshooting. Candidate scores use Elite (90–100%), Strong (75–89%), Considerations, and Irrelevant groups; checks include ATS parsing success, generic AI-written fluff, career continuity (gaps), and currency (whether experience is current).</li>
-                                        <li><strong>Interview operations:</strong> Weighted scoring produces an accept/reject recommendation and executive summary. Match reasoning explains scores, requirement saturation reports the share of job needs met, and skills are grouped as verified, gaps, or negotiable. The system drafts tailored interview questions from identified gaps.</li>
-                                        <li><strong>Psychometric analysis:</strong> Flags unclear or shallow responses; assesses leadership style (laissez-faire, autocratic, or servant leader), communication style, and decision risk; recommends individual-contributor or leadership alignment; and creates profile-specific situational judgement tests.</li>
-                                    </ul>
-                                    <h5>Ross Dashboard · operations and candidate pipeline</h5>
-                                    <ul>
-                                        <li><strong>Role-based workspaces:</strong> ProtectedRoute separates /admin/* administrator oversight from /team/* recruiter and manager workspaces. Custom Supabase authorization tables and PostgreSQL row-level security keep role data isolated.</li>
-                                        <li><strong>AI-assisted intake:</strong> Recruiter CV uploads fill designation, age, total and relevant experience, current organization, reason for leaving, reporting manager, direct reports, current and expected compensation, notice period, and relocation permission. Client intake captures company, location, contact, roles, vacancies, and Active or Pending status.</li>
-                                        <li><strong>Candidate status tracker:</strong> Moves candidates through Pending Review, Sourced, Internal Shortlist, Client Shortlist 1, and Offer Stage. Sourcing assigns a client; managers approve or reject with required comments, and rejection ends that candidate flow; client feedback records Approved or Rejected by Client; moving to Offer Stage reduces the client's open vacancy count.</li>
-                                        <li><strong>Client pipeline:</strong> Pending-client feedback saves on blur. Promoting a signed prospect to Active migrates its information into the Active_Clients table.</li>
-                                    </ul>
-                                    <h5>Ross AI Assistant · context-aware company chat</h5>
-                                    <ul>
-                                        <li>A floating chat widget answers candidate and client questions using company term sheets and policies. Strict instructions keep answers inside that knowledge base rather than inventing policies or figures.</li>
-                                        <li>Conversation context is capped at the latest 20 messages. Candidate questions are routed to standard hiring channels without exposing management contacts; client questions about terms can be routed to business contacts.</li>
-                                        <li>The interface includes a collapsible history sidebar, typing indicators, aligned chat bubbles, and Markdown-rendered responses.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section" aria-labelledby="ross-stack-title">
-                                    <p class="project-kicker">02 / TECH STACK</p>
-                                    <h4 id="ross-stack-title">Architecture across the ecosystem</h4>
-                                    <h5>RossAI</h5>
-                                    <ul>
-                                        <li><strong>Backend:</strong> Python 3.10+, Flask, monolithic MVC structure, and Gunicorn for production.</li>
-                                        <li><strong>Data and auth:</strong> Supabase PostgreSQL with JWT authentication; a service-role key supports trusted server-side writes.</li>
-                                        <li><strong>AI and enrichment:</strong> Groq Cloud targets under-100ms inference with llama-3.3-70b-versatile for heavier tasks, llama-3.1-8b-instant for faster inference, and llama-3.2-11b-vision for OCR. Perplexity Sonar Online supplies live company research.</li>
-                                        <li><strong>Web interface:</strong> Server-side rendered (SSR) HTML5 templates, vanilla JavaScript, and custom CSS3 variables with a violet-and-ghost-white RapidReach theme, glass effects, gradient lighting, and staggered animation.</li>
-                                        <li><strong>Document parsing:</strong> pypdf and python-docx handle text documents; vision-model OCR is the image-resume fallback.</li>
-                                    </ul>
-                                    <h5>Ross Dashboard</h5>
-                                    <ul>
-                                        <li><strong>Frontend:</strong> React 19, Vite, Tailwind CSS, Lucide React, and React Router DOM 7.</li>
-                                        <li><strong>Database security:</strong> Supabase PostgreSQL, custom authorized_masters / authorized_managers / authorized_recruiters tables, and row-level security policies.</li>
-                                    </ul>
-                                    <h5>Ross AI Assistant</h5>
-                                    <ul>
-                                        <li><strong>Backend and model:</strong> Node.js, Express.js REST API (POST /chat), and the OpenAI SDK connected to Groq's llama-3.3-70b-versatile model.</li>
-                                        <li><strong>Frontend:</strong> Semantic HTML5, CSS3, vanilla JavaScript, and marked.js for Markdown rendering.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section" aria-labelledby="ross-document-title">
-                                    <p class="project-kicker">03 / VIEW DOCUMENT</p>
-                                    <h4 id="ross-document-title">Letter of Recommendation</h4>
-                                    <iframe class="document-preview" src="assets/certificates/ross-warner-letter-of-recommendation.pdf#toolbar=0&amp;navpanes=0" title="Ross Warner internship letter of recommendation" loading="lazy"></iframe>
-                                    <a class="text-link" href="assets/certificates/ross-warner-letter-of-recommendation.pdf" target="_blank" rel="noopener noreferrer">View Ross Warner letter of recommendation <span aria-hidden="true">↗</span></a>
-                                </section>
-                            </div>
-                        </details>
+                        <p class="experience-summary">Built AI tools for recruitment, candidate review, and business operations across three connected products.</p>
+                        <a class="button button-secondary" href="projects.html#ross">Explore my Ross Warner work <span aria-hidden="true">→</span></a>
                     </div>
                 </article>
             </div>
@@ -224,11 +169,11 @@
         <section class="section-shell section-block" id="projects" aria-labelledby="projects-title">
             <div class="section-heading" data-reveal>
                 <p class="eyebrow">03 / SELECTED WORK</p>
-                <h2 id="projects-title">Ideas made <span class="muted">tangible.</span></h2>
-                <p class="section-intro">A mix of applied AI, full-stack engineering, research, and data exploration.</p>
+                <h2 id="projects-title">Three projects.<br><span class="muted">Built to solve real problems.</span></h2>
+                <p class="section-intro">AI/ML domain-winning navigation, real-time security research, and a space intelligence platform.</p>
             </div>
             <div class="project-grid">
-                <article class="project-card project-featured" data-reveal>
+                <article class="project-card project-featured" id="techvanza" data-reveal>
                     <div class="project-image"><img src="assets/images/techvanza-award-team.jpg" alt="RapidReach team receiving its Techvanza ’26 third-place recognition"></div>
                     <div class="project-body">
                         <p class="project-kicker">AI/ML DOMAIN WINNER · 3RD OVERALL · JAN 2026</p>
@@ -241,172 +186,37 @@
                         </ul>
                         <div class="tag-list"><span>React</span><span>Python · Flask</span><span>Llama 3 · Groq</span><span>NLTK</span><span>OpenStreetMap</span></div>
                         <p class="project-result">Won the AI/ML domain and placed 3rd overall among 40+ teams at Techvanza ’26.</p>
-                        <a class="text-link" href="#achievements">See the achievement <span aria-hidden="true">→</span></a>
+                        <a class="text-link" href="projects.html#rapidreach">Explore RapidReach <span aria-hidden="true">→</span></a>
                     </div>
                 </article>
-                <article class="project-card project-with-image" data-reveal>
+                <article class="project-card project-with-image" id="ddos" data-reveal>
                     <div class="project-image project-portrait"><img src="assets/images/ddos-project-team.jpg" alt="Soham and his final-year DDoS project team holding their project books"></div>
                     <div class="project-body">
                         <p class="project-kicker">FINAL-YEAR PROJECT · CYBERSECURITY</p>
                         <h3>Real-Time DDoS Detection &amp; Response</h3>
-                        <p>A machine-learning project that watches network traffic, spots and sorts common attacks, and helps respond to threats.</p>
-                        <div class="tag-list"><span>Python</span><span>Machine learning</span><span>Network safety</span><span>Traffic data</span></div>
+                        <p>A real-time traffic monitor that uses packet rates and statistical checks to flag suspicious activity and help block malicious sources.</p>
+                        <div class="tag-list"><span>Python</span><span>Flask</span><span>WinDivert</span><span>SQLite</span><span>Traffic analysis</span></div>
                         <p class="project-result">Research paper published in the International Journal of Creative Research Thoughts (IJCRT).</p>
                         <a class="text-link" href="https://drive.google.com/file/d/1LNoH1oU5yZiKgx4cMhxB7-ZtVU9KcyK2/view?usp=sharing" target="_blank" rel="noopener noreferrer">View research paper <span aria-hidden="true">↗</span></a>
+                        <a class="text-link" href="projects.html#ddos">Explore DDoS system <span aria-hidden="true">→</span></a>
                     </div>
                 </article>
-                <article class="project-card project-deep-dive" data-reveal>
+                <article class="project-card project-deep-dive" id="beyond-horizon" data-reveal>
                     <div class="project-body">
                         <p class="project-kicker">AI/ML HACKATHON FINALIST · CODE-A-THON 2.0</p>
                         <h3>Beyond Horizon</h3>
                         <p>A real-time space operating system and installable PWA that brings together 15+ live scientific data streams, satellite and sensor telemetry, interactive 3D visualizations, and generative AI for astronomy, Earth observation, and STEM learning.</p>
                         <div class="tag-list"><span>React · TypeScript</span><span>Three.js</span><span>Supabase</span><span>NASA · NOAA</span><span>Groq AI</span><span>ESP32</span></div>
-                        <details class="technical-report">
-                            <summary>Explore the full technical breakdown</summary>
-                            <div class="report-sections">
-                                <section class="report-section">
-                                    <p class="project-kicker">01 / PRODUCT &amp; DESIGN</p>
-                                    <h4>Mission Control for space and Earth data</h4>
-                                    <p>Beyond Horizon combines 15+ live science feeds, edge-device readings, and generative AI in one real-time platform. It is designed for space enthusiasts and amateur astronomers tracking the ISS, solar weather, and sky events; STEM students and educators exploring orbital mechanics, climate, and planetary science; and citizen scientists following wildfires, air quality, and floods.</p>
-                                    <ul>
-                                        <li><strong>Freemium plans:</strong> Cadet provides the core dashboard, tracked events, and learning modules. Commander / Pro ($4.99 per month) adds unlimited AI image analysis, SMS alerts for solar flares and ISS passes, ad-free offline use, and high-resolution satellite layers. Admiral is the proposed enterprise classroom license for educator access to student XP, quiz scores, and progress through Supabase.</li>
-                                        <li><strong>Future revenue:</strong> Telescope and space-tourism affiliate links, plus a planned Unified Space API that cleans and packages multi-agency aerospace data for developers.</li>
-                                        <li><strong>Visual design:</strong> Midnight blue and void black with neon-blue and warning-red accents; glass panels over WebGL starfields and interactive globes; magnetic buttons, hover cards, hardware-accelerated 60fps Framer Motion transitions, and 8K mission-history assets.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section">
-                                    <p class="project-kicker">02 / APPLICATION ARCHITECTURE</p>
-                                    <h4>Web, graphics, and cloud services</h4>
-                                    <ul>
-                                        <li><strong>Frontend:</strong> React 18, Vite, TypeScript, Tailwind CSS 4.1, Styled Components, Framer Motion 12, Radix UI primitives (accessible tabs, progress bars, and dialogs), and Lucide React. Local interface state uses useState; shared audio and session state use Zustand and React Context.</li>
-                                        <li><strong>Installable PWA:</strong> vite-plugin-pwa with automatic updates caches **/*.{js,css,html,ico,png,svg} assets for read-only offline Commander access and standalone installation.</li>
-                                        <li><strong>3D engine:</strong> Three.js, React Three Fiber, and @react-three/drei. Canvas configuration manages pixel ratio, shadows, and sRGB encoding. Demand rendering saves mobile battery; InstancedMesh draws thousands of stars or asteroids in a single call; useTexture loads 4K/8K planetary textures lazily.</li>
-                                        <li><strong>Visual modules:</strong> Drei Html projects React tooltips onto 3D bodies; Planetarium.tsx uses VirtualSky; SplashCursor.tsx renders fluid effects; Aurora.tsx creates procedural SVG motion effects with Framer Motion filters.</li>
-                                        <li><strong>Backend:</strong> Supabase on PostgreSQL 15+ with Vercel Edge. The schema includes profiles (id, user_id, role, XP, rank), missions (id, name, agency, launch_date, status, image_url), progress (user_id, resource_id, score, status), and subscriptions (user_id, status, tier, current_period_end).</li>
-                                        <li><strong>Access and real time:</strong> PostgreSQL row-level security uses JWT claims for Cadet, Commander, and Admiral roles. Supabase Realtime broadcasts global cosmic alerts on global:alerts and private achievements on user:{id} WebSocket channels. TypeScript/Deno Edge Functions handle /api/ai-chat and /api/process-subscription.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section">
-                                    <p class="project-kicker">03 / SCIENCE &amp; LIVE TELEMETRY</p>
-                                    <h4>Orbital calculations and external data</h4>
-                                    <ul>
-                                        <li><strong>Satellite orbits:</strong> satellite.js propagates SGP4/SDP4 TLE data in the browser to calculate current ISS position and velocity vectors. api.wheretheiss.at supplies position every three seconds; N2YO calculates overhead passes from user coordinates.</li>
-                                        <li><strong>Astronomy:</strong> astronomy-engine calculates lunar phases, meteor-shower radiant visibility, and eclipses, including distance from the eclipse path of totality with Haversine geometry. SunCalc determines civil, nautical, and astronomical twilight and true-dark conditions when the Sun is 18 degrees below the horizon.</li>
-                                        <li><strong>Planet positions:</strong> A custom zero-dependency Keplerian engine in nasaService.ts uses low-precision J2000 orbital elements for geocentric right ascension and declination, and detects conjunctions from angular separation.</li>
-                                        <li><strong>NOAA space weather:</strong> GOES-R five-minute X-ray flux is grouped into A, B, C, M, and X solar flares. Planetary K-index data feeds geomagnetic-storm alerts and the Zhang-Paxton auroral oval; OVATION probabilities are mapped onto a 3D globe. Proton flux at or above 10 MeV is compared with NOAA S1-S5 radiation-storm thresholds.</li>
-                                        <li><strong>Earth and climate:</strong> NASA EONET streams disaster coordinates for wildfires and floods; NASA GIBS serves near-real-time layers such as active fires and Black Marble night lights on Leaflet. The Global Warming API reports monthly temperature anomalies (for example, +1.40 C) against the 1951-1980 baseline.</li>
-                                        <li><strong>Atmosphere:</strong> Open-Meteo and OpenAQ provide cloud cover, PM2.5, and NO2 measurements.</li>
-                                        <li><strong>Launches and news:</strong> The Space Devs API (LL 2.2.0) supplies launch manifests with SpaceX API fallback. Spaceflight News API v4 combines global and ISRO news searches. NASA APOD falls back from API to RSS, then AllOrigins proxy scraping of apod.nasa.gov if rate-limited.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section">
-                                    <p class="project-kicker">04 / EDGE SENSORS</p>
-                                    <h4>Local environmental measurements</h4>
-                                    <ul>
-                                        <li>An ESP32 microcontroller runs customized C++ / FreeRTOS firmware and polls a DHT11 temperature-and-humidity sensor and an MQ135 air-quality, smoke, and pollution sensor.</li>
-                                        <li>The ESP32 posts JSON telemetry to n8n webhooks. n8n calibrates and validates the data before storing it in Supabase PostgreSQL.</li>
-                                        <li>A local Seeing Quality score weights cloud cover at 50%, humidity at 30%, and AQI at 20%. The system also estimates Bortle light-pollution class from AQI.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section">
-                                    <p class="project-kicker">05 / AI SYSTEMS</p>
-                                    <h4>Conversational and vision models</h4>
-                                    <ul>
-                                        <li><strong>Astro Assistant / Commander Aurora:</strong> Groq-hosted llama-3.3-70b-versatile delivers low-latency inference (under 300 ms), with a strict Commander Aurora voice and a friendly Astro Guide voice. Multilingual Groq Whisper Large v3 handles speech-to-text; browser Web Speech API reads answers aloud.</li>
-                                        <li><strong>AI navigation:</strong> The assistant can return a hidden [[NAVIGATE: Mission Name]] command so the client routes to a mission and highlights it with smooth scrolling.</li>
-                                        <li><strong>Vision AI:</strong> Groq multimodal meta-llama/llama-4-scout-17b-16e-instruct (with Llama 3.2 Vision 11B/90B alternatives) analyzes uploaded astrophotography, identifies objects such as the Orion Nebula, extracts distance and scale, and awards 50 XP for a successful observation.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section">
-                                    <p class="project-kicker">06 / PLATFORM MODULES</p>
-                                    <h4>Dashboards, observatory, and learning</h4>
-                                    <ul>
-                                        <li><strong>Dashboard:</strong> Brings together ISS paths, solar-weather alerts, launch countdowns, and XP. Browser geolocation with OpenStreetMap Nominatim reverse geocoding resolves coordinates into city, town, and suburb for local forecasts.</li>
-                                        <li><strong>Earth Space Intelligence:</strong> D3.js and HTML Canvas project landmass GeoJSON as 60fps animated halftone dots over continents. NASA SMAP soil moisture and Sentinel-2 NDVI support regional flood-probability and crop-yield-stress scores.</li>
-                                        <li><strong>Observatory:</strong> Las Cumbres Observatory VirtualSky uses stereographic projection to map right ascension and declination to a 2D sky. virtualsky.min.js and stuquery.min.js load only when the component enters view through Framer Motion's useInView hook, then unmount off-screen; live mode follows local time and GPS.</li>
-                                        <li><strong>Discover:</strong> Combines general Spaceflight News searches with a parallel ISRO-priority search. "Did You Know?" polls howmanypeopleareinspacerightnow.com for the current orbital population and api.le-system.org for randomized planetary gravity data.</li>
-                                        <li><strong>Missions:</strong> Regex maps payload names such as Falcon 9 and Starlink to local mission art. Historical Apollo and Voyager records merge with live launch feeds in one timeline.</li>
-                                        <li><strong>Education hub:</strong> Cadet → Specialist → Officer → Commander → Admiral ranks. Quizzes award 10 XP per answer and modules or AI vision scans award 50 XP. Supabase upserts bind badges to JWT profiles; fuzzy matching tests image-based space-station and orbital-module recognition.</li>
-                                    </ul>
-                                </section>
-                                <section class="report-section">
-                                    <p class="project-kicker">07 / DELIVERY &amp; SCALE</p>
-                                    <h4>Performance, operations, and growth</h4>
-                                    <ul>
-                                        <li>The report estimates a 10,000-user MVP at about $75 per month: $20 Vercel Edge, $25 Supabase Pro, and about $30 Groq usage.</li>
-                                        <li>For 1M+ users, the proposed plan adds Redis caching for NOAA and Groq responses and moves to Vercel Enterprise and dedicated Supabase AWS compute.</li>
-                                        <li>GitHub Actions runs lint and tests, creates Vercel previews, and manages Supabase SQL migrations. Sentry and Core Web Vitals track client errors and performance.</li>
-                                    </ul>
-                                </section>
-                            </div>
-                        </details>
-                    </div>
-                </article>
-                <article class="project-certificate-card" data-reveal>
-                    <a href="assets/images/codeathon-finalist-certificate.jpg" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/codeathon-finalist-certificate.jpg" alt="Code-a-thon 2.0 certificate of appreciation for Beyond Horizon finalist Soham Rane">
-                    </a>
-                    <div><p class="project-kicker">CODE-A-THON 2.0 · CSI CATT 2025–2026</p><h3>Beyond Horizon · Certificate of Appreciation</h3><p>Recognized as a finalist at the Code-a-thon on 6 February 2026.</p><a class="text-link" href="assets/images/codeathon-finalist-certificate.jpg" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a></div>
-                </article>
-                <article class="project-card" data-reveal>
-                    <div class="project-body">
-                        <p class="project-kicker">COMPUTER VISION · DEEP LEARNING</p>
-                        <h3>PlantLensAI</h3>
-                        <p>A CNN-powered plant disease classification project paired with a web interface for interactive predictions.</p>
-                        <div class="tag-list"><span>TensorFlow</span><span>Computer Vision</span><span>React</span></div>
-                        <a class="text-link" href="https://github.com/sohamrane10/PlantLens.ai" target="_blank" rel="noopener noreferrer">Explore PlantLensAI on GitHub <span aria-hidden="true">↗</span></a>
-                    </div>
-                </article>
-                <article class="project-card" data-reveal>
-                    <div class="project-body">
-                        <p class="project-kicker">MACHINE LEARNING</p>
-                        <h3>Online Transaction Fraud Detection</h3>
-                        <p>A classification workflow for identifying potentially fraudulent transactions, with data preparation and evaluation using precision, recall, F1, and ROC-AUC.</p>
-                        <img class="project-thumbnail" src="Online Transaction Fraud Detection.png" alt="Online transaction fraud detection project visualization">
-                        <a class="text-link" href="https://sohamrane10.github.io/OnlineTransactionFraudDetection/" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
-                    </div>
-                </article>
-                <article class="project-card" data-reveal>
-                    <div class="project-body">
-                        <p class="project-kicker">DATA SCIENCE · R</p>
-                        <h3>Social Network Analysis</h3>
-                        <p>Built and visualized network graphs, explored centrality and hub scores, and used community detection to reveal relationships and influential nodes.</p>
-                        <img class="project-thumbnail" src="Social Network Analysis.png" alt="Social network analysis graph">
-                        <a class="text-link" href="https://sohamrane10.github.io/Social-Network-Analysis/" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
-                    </div>
-                </article>
-                <article class="project-card project-compact" data-reveal>
-                    <div class="project-body">
-                        <p class="project-kicker">MORE BUILDS</p>
-                        <h3>Experiments &amp; foundations</h3>
-                        <p>Iris species classification with scikit-learn, a React Tic-Tac-Toe game, and an Azure computer-vision project.</p>
-                        <div class="text-link-group">
-                            <a class="text-link" href="https://sohamrane10.github.io/IrisFlowerClassification/" target="_blank" rel="noopener noreferrer">Iris classification ↗</a>
-                            <a class="text-link" href="https://sohamrane10.github.io/Tic-Tac-Toe-Game/" target="_blank" rel="noopener noreferrer">Tic-Tac-Toe ↗</a>
-                            <a class="text-link" href="assets/certificates/azure-computer-vision-project.pdf" target="_blank" rel="noopener noreferrer">Azure project certificate ↗</a>
-                        </div>
+                        <a class="button button-secondary" href="projects.html#beyond-horizon">Explore Beyond Horizon <span aria-hidden="true">→</span></a>
                     </div>
                 </article>
             </div>
-        </section>
-
-        <section class="section-shell section-block" id="achievements" aria-labelledby="achievements-title">
-            <div class="section-heading" data-reveal>
-                <p class="eyebrow">04 / MILESTONES</p>
-                <h2 id="achievements-title">A hackathon win<br><span class="muted">worth sharing.</span></h2>
-            </div>
-            <div class="achievement-grid">
-                <article class="achievement-card achievement-featured" data-reveal>
-                    <img src="assets/images/techvanza-award-team.jpg" alt="The RapidReach team receiving third-place recognition at Techvanza ’26">
-                    <div><span class="achievement-label">AI / ML HACKATHON</span><h3>Techvanza ’26 · AI/ML Domain Winner</h3><p>Led RapidReach to win the AI/ML domain and earn third place overall among 40+ teams, with a tool to help people find hard-to-reach local places.</p></div>
-                </article>
-            </div>
-            <a class="button button-secondary archive-link" href="achievements.html">See achievements &amp; participation <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary projects-page-link" href="projects.html">View all projects &amp; technical details <span aria-hidden="true">→</span></a>
         </section>
 
         <section class="section-shell section-block education-section" id="education" aria-labelledby="education-title">
             <div class="section-heading" data-reveal>
-                <p class="eyebrow">05 / EDUCATION</p>
+                <p class="eyebrow">04 / EDUCATION</p>
                 <h2 id="education-title">A foundation in <span class="muted">intelligent systems.</span></h2>
             </div>
             <article class="education-card" data-reveal>
@@ -429,7 +239,7 @@
         <section class="section-shell contact-section" id="contact" aria-labelledby="contact-title">
             <div class="contact-card" data-reveal>
                 <div>
-                    <p class="eyebrow">06 / LET’S CONNECT</p>
+                    <p class="eyebrow">05 / LET’S CONNECT</p>
                     <h2 id="contact-title">Have a thoughtful problem<br><span class="muted">to solve with AI?</span></h2>
                     <p>I’m open to conversations about AI/ML engineering, applied research, and building useful products.</p>
                 </div>
@@ -446,6 +256,7 @@
         <a class="wordmark" href="#home">SR<span>.</span></a>
         <p>Designed and built with care by Soham Rane · <span id="current-year">2026</span></p>
         <button class="footer-settings" id="open-settings-footer" type="button" aria-haspopup="dialog" aria-controls="settings-dialog">Appearance settings</button>
+        <a href="projects.html">Projects</a>
         <a href="achievements.html">Achievements &amp; certificates</a>
         <a href="#home">Back to top ↑</a>
     </footer>

@@ -8,9 +8,10 @@ Open `index.html` in a browser or serve the repository root with any static HTTP
 
 ## Site structure
 
-- `index.html` contains the main portfolio and anchor navigation.
+- `index.html` is the focused landing page for headline results, the Ross Warner internship, and three major projects.
+- `projects.html` contains technical breakdowns of the major projects and a separate collection of smaller builds.
 - `achievements.html` keeps courses, job simulations, coding challenges, exams, workshops, internships, and participation certificates off the main page.
 - `portfolio.css` provides the dark-first, light/dark responsive design and reduced-motion styles.
 - `script.js` handles navigation, appearance settings, and scroll reveals.
-- `assets/images/` contains portfolio, project, and achievement photos.
+- `assets/images/` contains portfolio, project, achievement, and RapidReach dashboard photos.
 - `assets/certificates/` contains certificate images and PDFs shown in the achievements archive.
