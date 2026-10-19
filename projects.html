@@ -1,5 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0; url=index.html#projects"><title>Projects | Soham Rane</title></head>
-<body><p>Projects have moved to the <a href="index.html#projects">single-page portfolio</a>.</p></body>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090909">
+    <meta name="description" content="A closer look at Soham Rane's AI, navigation, cybersecurity, and space-data projects.">
+    <title>Projects | Soham Rane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="projects-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="archive-header">
+        <a class="wordmark" href="index.html" aria-label="Soham Rane, home">SR<span>.</span></a>
+        <nav class="archive-header-links" aria-label="Page navigation">
+            <a href="index.html">Home</a>
+            <a href="#project-list">Projects</a>
+            <a href="achievements.html">Achievements</a>
+        </nav>
+    </header>
+
+    <main id="main" class="section-shell archive-main">
+        <header class="archive-intro projects-intro">
+            <p class="eyebrow">SELECTED WORK · PROJECT NOTES</p>
+            <h1>Built with purpose.<br><span class="muted">Made to be useful.</span></h1>
+            <p>Explore the ideas, features, and technology behind my main projects, then browse smaller builds at the end.</p>
+        </header>
+        <nav class="project-index" id="project-list" aria-label="Jump to a project">
+            <a href="#ross">Ross Warner</a>
+            <a href="#rapidreach">RapidReach · Techvanza ’26</a>
+            <a href="#beyond-horizon">Beyond Horizon</a>
+            <a href="#ddos">DDoS detection</a>
+            <a href="#other-projects">Other projects</a>
+        </nav>
+
+        <section class="project-detail" id="ross" aria-labelledby="ross-title">
+            <header class="detail-heading">
+                <p class="project-kicker">AI/ML INTERNSHIP · DEC 2025 — FEB 2026</p>
+                <h2 id="ross-title">Ross Warner HR Solutions</h2>
+                <p>Built and contributed to three connected products that support recruitment, internal operations, and company questions.</p>
+            </header>
+            <div class="detail-overview">
+                <img src="assets/images/ross-internship.jpg" alt="Soham during his Ross Warner internship">
+                <div class="detail-overview-copy">
+                    <p class="eyebrow">THE WORK</p>
+                    <h3>AI for hiring, operations, and support</h3>
+                    <p>My internship work covered NLP pipelines, AI inference, database connections, structured logging, and candidate-data analysis. The wider product set includes RossAI, the Ross Dashboard, and the Ross AI Assistant.</p>
+                    <a class="text-link" href="assets/certificates/ross-warner-letter-of-recommendation.pdf" target="_blank" rel="noopener noreferrer">View letter of recommendation <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">01 / FEATURES</p><h3>Three connected HR tools</h3></div>
+                <div class="detail-grid">
+                    <article class="detail-card detail-card-wide">
+                        <span class="detail-number">01</span><h4>RossAI · recruitment and interviews</h4>
+                        <ul>
+                            <li><strong>AI Job Architect:</strong> Creates structured, ready-to-publish job descriptions from role, salary, technology, and reporting details. It can also draft outreach messages and LinkedIn posts. Perplexity Sonar Online can research company culture, history, and benefits when details are missing.</li>
+                            <li><strong>CV reading:</strong> Reads PDF and Word files with pypdf and python-docx, and uses Groq vision for image-based CVs. Extraction logs help trace parsing issues.</li>
+                            <li><strong>Candidate review:</strong> Groups scores into Elite (90–100%), Strong (75–89%), Considerations, and Irrelevant. Reviews ATS parsing, generic AI-written content, career gaps, and whether experience is current.</li>
+                            <li><strong>Interview support:</strong> Weighted scoring gives an accept/reject recommendation and summary. Match explanations, requirement coverage, verified/gap/negotiable skill groups, and custom questions help guide the interview.</li>
+                            <li><strong>Work-style insights:</strong> Reviews response clarity, leadership and communication styles, decision risk, and role fit; it can create situational judgement questions for an individual candidate.</li>
+                        </ul>
+                    </article>
+                    <article class="detail-card">
+                        <span class="detail-number">02</span><h4>Ross Dashboard · team operations</h4>
+                        <ul>
+                            <li>Separate admin and team workspaces protect the views used by administrators, managers, and recruiters.</li>
+                            <li>CV uploads help fill candidate details, including role, experience, employer, compensation, notice period, reporting line, and relocation preference.</li>
+                            <li>Client intake records company, location, contacts, vacancies, and Active or Pending status.</li>
+                            <li>Candidate flow: Pending Review → Sourced → Internal Shortlist → Client Shortlist 1 → Offer Stage. Sourcing assigns a client; manager approval or rejection requires comments, client feedback is recorded, and an offer reduces the open vacancy count.</li>
+                            <li>Signed prospects can be promoted from the pending pipeline into active client records.</li>
+                        </ul>
+                    </article>
+                    <article class="detail-card">
+                        <span class="detail-number">03</span><h4>Ross AI Assistant · company chat</h4>
+                        <ul>
+                            <li>A floating chat tool answers questions using the company's term sheets and policies, with instructions to avoid making up information.</li>
+                            <li>The chat keeps the latest 20 messages as context. Candidate questions go to standard hiring channels; client questions about terms can be directed to the right business contacts.</li>
+                            <li>A history sidebar, typing indicator, chat bubbles, and Markdown responses support the user experience.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">02 / TECH STACK</p><h3>Tools behind the three products</h3></div>
+                <div class="detail-grid detail-stack-grid">
+                    <article class="detail-card"><h4>RossAI</h4><div class="detail-tags"><span>Python 3.10+</span><span>Flask · MVC</span><span>Gunicorn</span><span>Supabase · PostgreSQL</span><span>JWT Auth</span><span>Groq Cloud</span><span>Perplexity Sonar</span><span>HTML · CSS · JavaScript</span><span>pypdf</span><span>python-docx</span></div><p>Groq models include Llama 3.3 70B for deeper tasks, Llama 3.1 8B for faster responses, and Llama 3.2 Vision 11B for image CVs. The web app uses server-rendered HTML templates and a custom CSS theme.</p></article>
+                    <article class="detail-card"><h4>Ross Dashboard</h4><div class="detail-tags"><span>React 19</span><span>Vite</span><span>Tailwind CSS</span><span>Lucide React</span><span>React Router 7</span><span>Supabase</span><span>PostgreSQL RLS</span></div><p>Custom authorization tables for masters, managers, and recruiters support role-based access. Protected routes separate admin and team pages; database row-level security limits access to the right data.</p></article>
+                    <article class="detail-card"><h4>Ross AI Assistant</h4><div class="detail-tags"><span>Node.js</span><span>Express.js</span><span>REST API</span><span>OpenAI SDK</span><span>Groq · Llama 3.3 70B</span><span>HTML · CSS · JavaScript</span><span>marked.js</span></div><p>A stateless chat endpoint combines the company prompt with recent conversation history. The client renders formatted answers in a chat widget.</p></article>
+                </div>
+            </div>
+
+            <div class="detail-document">
+                <div><p class="eyebrow">03 / VIEW DOCUMENT</p><h3>Ross Warner letter of recommendation</h3><p>The internship recommendation letter is available below or as a separate PDF.</p></div>
+                <iframe class="document-preview" src="assets/certificates/ross-warner-letter-of-recommendation.pdf#toolbar=0&amp;navpanes=0" title="Ross Warner internship letter of recommendation" loading="lazy"></iframe>
+                <a class="button button-secondary" href="assets/certificates/ross-warner-letter-of-recommendation.pdf" target="_blank" rel="noopener noreferrer">Open the letter <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="project-detail" id="rapidreach" aria-labelledby="rapidreach-title">
+            <header class="detail-heading">
+                <p class="project-kicker">AI/ML DOMAIN WINNER · THIRD OVERALL · TECHVANZA ’26</p>
+                <h2 id="rapidreach-title">RapidReach</h2>
+                <p>A multi-input navigation tool for vague, local directions. It turns spoken, written, or visual clues into clearer address details and map locations.</p>
+            </header>
+            <figure class="rapidreach-collage">
+                <img src="assets/images/rapidreach-dashboard-collage.png" alt="RapidReach screens showing address normalization, multilingual voice input, location maps, and navigation">
+                <figcaption>RapidReach in action · address analysis, maps, and voice input</figcaption>
+            </figure>
+            <div class="detail-award">
+                <img src="assets/images/techvanza-award-team.jpg" alt="RapidReach team receiving recognition at Techvanza ’26">
+                <div><p class="eyebrow">40+ TEAMS · 3 DOMAINS · 12+ HOUR SPRINT</p><h3>Winner in AI/ML. Third place overall.</h3><p>RapidReach won its AI/ML domain at Techvanza ’26, hosted by SVKM's Usha Pravin Gandhi College of Arts, Science &amp; Commerce, and placed third overall.</p></div>
+            </div>
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">01 / HOW IT WORKS</p><h3>From local clues to a map point</h3></div>
+                <div class="detail-grid">
+                    <article class="detail-card"><span class="detail-number">A</span><h4>Address cleanup</h4><p>NLTK prepares informal directions; Llama 3.3 identifies suburbs, streets, house or building names, landmarks, and direction phrases such as “behind” or “opposite.” The result is organized into a clear JSON address.</p></article>
+                    <article class="detail-card"><span class="detail-number">B</span><h4>Landmark image reading</h4><p>Users can add a photo of a shop, sign, or nearby landmark. The vision flow reads visible names and numbers, then checks them against business listings and OpenStreetMap points of interest.</p></article>
+                    <article class="detail-card"><span class="detail-number">C</span><h4>Voice directions</h4><p>Voice input supports Hindi, Marathi, and English. It removes conversational filler while preserving the local direction phrases that help locate the destination.</p></article>
+                    <article class="detail-card detail-card-wide"><span class="detail-number">D</span><h4>Seven-step location fallback</h4>
+                        <ol class="detail-steps">
+                            <li><strong>Exact match:</strong> Look for a full postal or street match.</li>
+                            <li><strong>Address parts:</strong> Pull out landmarks and street names from less exact text.</li>
+                            <li><strong>Nearby places:</strong> Compare those names with OpenStreetMap points of interest.</li>
+                            <li><strong>Image clues:</strong> Use a landmark or storefront photo when text matching is not enough.</li>
+                            <li><strong>Local phrases:</strong> Convert Marathi and Hindi direction words into useful orientation clues.</li>
+                            <li><strong>Area limits:</strong> Narrow the search to a known neighborhood or district boundary.</li>
+                            <li><strong>Nearest anchor:</strong> Use the nearest confirmed map point and show the remaining distance for a person to check.</li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">02 / TECH STACK &amp; APP</p><h3>A small, connected AI pipeline</h3></div>
+                <div class="detail-grid detail-stack-grid">
+                    <article class="detail-card"><h4>App and services</h4><div class="detail-tags"><span>React</span><span>Python</span><span>Flask REST API</span><span>Groq Cloud</span><span>Llama 3.3</span><span>NLTK</span></div><p>The React dashboard sends address, image, and voice requests to a Flask API, which manages session state, decodes audio, reads image data, and calls the relevant AI service.</p></article>
+                    <article class="detail-card"><h4>Maps and location</h4><div class="detail-tags"><span>OpenStreetMap</span><span>Leaflet</span><span>GPS coordinates</span><span>Map overlays</span></div><p>Map layers show coordinates, bounding areas, and the final route or nearby anchor point for last-mile checks.</p></article>
+                    <article class="detail-card"><h4>Operator experience</h4><div class="detail-tags"><span>Text input</span><span>Voice transcription</span><span>Image upload</span><span>Address comparison</span></div><p>The dashboard compares raw directions with normalized address details and places the result on an interactive map.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-detail" id="beyond-horizon" aria-labelledby="beyond-title">
+            <header class="detail-heading">
+                <p class="project-kicker">SPACE · EARTH DATA · AI · CODE-A-THON 2.0 FINALIST</p>
+                <h2 id="beyond-title">Beyond Horizon</h2>
+                <p>A space and Earth intelligence platform that brings live science data, satellite and sensor readings, 3D views, and AI into one installable learning workspace.</p>
+            </header>
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">01 / PLATFORM</p><h3>One view across sky, Earth, and learning</h3></div>
+                <div class="detail-grid">
+                    <article class="detail-card"><span class="detail-number">01</span><h4>Live dashboard</h4><p>Combines ISS position and track, solar-weather alerts, launch countdowns, local sky conditions, and learning progress. Browser location and OpenStreetMap Nominatim help resolve a user's coordinates to a city, town, or suburb.</p></article>
+                    <article class="detail-card"><span class="detail-number">02</span><h4>Earth intelligence</h4><p>D3.js and Canvas animate landmass data. NASA SMAP soil moisture and Sentinel-2 NDVI support regional flood-risk and crop-stress views. NASA EONET provides disaster locations, while NASA GIBS adds layers such as active fires and night lights.</p></article>
+                    <article class="detail-card"><span class="detail-number">03</span><h4>Observatory and sky events</h4><p>VirtualSky maps the sky using stereographic projection and local time or GPS. Astronomy calculations cover lunar phases, meteor showers, eclipses, twilight, and dark-sky conditions. Planet positions use orbital elements; conjunctions are found from angular separation.</p></article>
+                    <article class="detail-card"><span class="detail-number">04</span><h4>Satellite and space weather</h4><p>Satellite.js uses SGP4/SDP4 with TLE data to calculate satellite position and velocity. ISS and N2YO services provide live positions and overhead passes. NOAA data tracks X-ray flares, K-index geomagnetic activity, aurora probability, and proton-flux storm levels.</p></article>
+                    <article class="detail-card"><span class="detail-number">04A</span><h4>Space-weather detail</h4><p>GOES-R five-minute X-ray readings group flares into A, B, C, M, and X classes. K-index data feeds geomagnetic alerts and the Zhang–Paxton auroral oval; OVATION probabilities are drawn on the globe. Proton levels at or above 10 MeV are compared with NOAA S1–S5 storm bands.</p></article>
+                    <article class="detail-card"><span class="detail-number">05</span><h4>Local sensor readings</h4><p>An ESP32 reads temperature and humidity from DHT11 and air-quality readings from MQ135. It sends JSON to n8n, which checks and calibrates readings before saving them in Supabase. A sky-quality score weighs cloud cover (50%), humidity (30%), and air quality (20%).</p></article>
+                    <article class="detail-card"><span class="detail-number">06</span><h4>AI guide and image reading</h4><p>Groq-hosted Llama 3.3 provides a conversational astronomy guide, with separate friendly and mission-control voices. Groq Whisper transcribes speech; browser speech tools can read answers aloud. Vision models analyze astronomy photos, identify objects, and return details such as distance and scale.</p></article>
+                    <article class="detail-card"><span class="detail-number">06A</span><h4>AI navigation and recognition</h4><p>The assistant can return a hidden navigation command to open and highlight a mission. The vision flow uses Groq-hosted Llama 4 Scout, with Llama 3.2 Vision 11B or 90B alternatives, to inspect astrophotography, recognize objects such as the Orion Nebula, return distance and scale, and award 50 XP for a successful observation.</p></article>
+                    <article class="detail-card"><span class="detail-number">07</span><h4>Missions, news, and discovery</h4><p>Space Devs launch data uses a SpaceX API fallback. Spaceflight News includes an ISRO-priority search. Historical Apollo and Voyager records appear beside current missions; NASA APOD uses API, RSS, and page-feed fallbacks.</p></article>
+                    <article class="detail-card"><span class="detail-number">07A</span><h4>More discovery tools</h4><p>Launch payload names such as Falcon 9 and Starlink can map to local mission art. The Discover area can also show current people in orbit and a random planet's surface gravity. APOD's fallback checks its API, RSS, then a proxy of NASA's APOD page.</p></article>
+                    <article class="detail-card"><span class="detail-number">08</span><h4>Learning and progress</h4><p>Cadet, Specialist, Officer, Commander, and Admiral ranks guide learning. Quizzes award 10 XP per answer; modules and image scans award 50 XP. Supabase stores profiles, missions, progress, subscriptions, and earned badges.</p></article>
+                    <article class="detail-card"><span class="detail-number">08A</span><h4>Learning content checks</h4><p>Badges are saved to user profiles, and fuzzy matching can recognize space-station and orbital-module images. The rank path connects lessons, quizzes, and observation tasks to stored progress.</p></article>
+                    <article class="detail-card"><span class="detail-number">09</span><h4>Plans and growth</h4><p>The product concept includes a free Cadet plan, a Commander / Pro plan at $4.99/month with extra alerts and offline features, and a proposed classroom plan for educator access to student progress. Future ideas include telescope links and a cleaned-up space-data API. The technical plan estimates an MVP at about $75/month and describes adding Redis caching and dedicated cloud resources as use grows.</p></article>
+                </div>
+            </div>
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">02 / TECH STACK</p><h3>Web, graphics, cloud, and hardware</h3></div>
+                <div class="detail-grid detail-stack-grid">
+                    <article class="detail-card"><h4>Web app</h4><div class="detail-tags"><span>React 18</span><span>Vite</span><span>TypeScript</span><span>Tailwind CSS 4.1</span><span>Styled Components</span><span>Framer Motion 12</span><span>Radix UI</span><span>Lucide React</span><span>Zustand</span><span>React Context</span></div><p>An installable PWA uses vite-plugin-pwa to cache core assets for offline use. Interface state uses React; shared audio and session state use Zustand and Context.</p></article>
+                    <article class="detail-card"><h4>3D and visual layers</h4><div class="detail-tags"><span>Three.js</span><span>React Three Fiber</span><span>@react-three/drei</span><span>Leaflet</span><span>D3.js</span><span>Canvas</span><span>VirtualSky</span></div><p>Demand rendering, lazy texture loading, and instanced geometry help keep the 3D experience efficient. Sky, Earth, and planetary views use separate visual modules.</p></article>
+                    <article class="detail-card"><h4>Interface details</h4><p>Accessible Radix tabs, progress bars, and dialogs support navigation. Drei places React tooltips over 3D scenes; other modules include a VirtualSky planetarium, a fluid cursor, and animated aurora effects. The technical design uses pixel-ratio and shadow controls, sRGB color, and view-based loading for larger visual libraries.</p></article>
+                    <article class="detail-card"><h4>Cloud and devices</h4><div class="detail-tags"><span>Supabase</span><span>PostgreSQL 15+</span><span>Vercel Edge</span><span>TypeScript · Deno</span><span>ESP32</span><span>C++ · FreeRTOS</span><span>n8n</span></div><p>Supabase provides database, authentication, row-level access, and real-time alerts. Edge functions support chat and subscription tasks; the ESP32 sends local environment telemetry through n8n.</p></article>
+                    <article class="detail-card detail-card-wide"><h4>Science and data services</h4><div class="detail-tags"><span>NASA EONET</span><span>NASA GIBS</span><span>NASA SMAP</span><span>Sentinel-2</span><span>NOAA</span><span>Open-Meteo</span><span>OpenAQ</span><span>Space Devs</span><span>Spaceflight News</span><span>NASA APOD</span><span>satellite.js</span><span>astronomy-engine</span><span>SunCalc</span></div><p>Other calculations include Haversine distance from eclipse paths, aurora overlays, lunar and solar events, air quality, temperature anomalies, and local visibility measures.</p></article>
+                    <article class="detail-card"><h4>Access and live updates</h4><p>PostgreSQL row-level security checks JWT role claims for Cadet, Commander, and Admiral access. Supabase Realtime broadcasts global alerts and private achievements over separate channels. TypeScript/Deno edge functions handle AI chat and subscription tasks.</p></article>
+                    <article class="detail-card"><h4>Look and performance</h4><p>The visual system pairs midnight blue and near-black with bright blue and alert red. Glass panels sit over animated starfields and globes; reduced 3D work, one-draw-call instancing, lazy 4K/8K textures, and view-based module loading help keep the interface responsive.</p></article>
+                    <article class="detail-card detail-card-wide"><h4>Weather and sky data</h4><p>Open-Meteo and OpenAQ provide clouds, PM2.5, and NO₂. The Global Warming API supplies monthly temperature anomalies against a 1951–1980 baseline. SunCalc estimates civil, nautical, and astronomical twilight, including true-dark conditions when the Sun is 18° below the horizon.</p></article>
+                    <article class="detail-card detail-card-wide"><h4>Build, release, and monitoring</h4><p>GitHub Actions is set up for linting and tests, Vercel preview builds, and Supabase SQL migrations. Sentry and Core Web Vitals are used to track errors and page performance. A future scale plan adds Redis caching for NOAA and Groq results and moves to larger hosting/database resources when needed.</p></article>
+                </div>
+            </div>
+            <figure class="detail-certificate">
+                <img src="assets/images/codeathon-finalist-certificate.jpg" alt="Beyond Horizon certificate of appreciation from Code-a-thon 2.0">
+                <figcaption>Code-a-thon 2.0 · Certificate of Appreciation</figcaption>
+                <a class="text-link" href="assets/images/codeathon-finalist-certificate.jpg" target="_blank" rel="noopener noreferrer">View certificate <span aria-hidden="true">↗</span></a>
+            </figure>
+        </section>
+
+        <section class="project-detail" id="ddos" aria-labelledby="ddos-title">
+            <header class="detail-heading">
+                <p class="project-kicker">FINAL-YEAR PROJECT · SECURITY RESEARCH · IJCRT</p>
+                <h2 id="ddos-title">Real-Time DDoS Detection &amp; Response</h2>
+                <p>An open-source, real-time traffic monitoring system that uses packet-level statistics to flag unusual traffic and respond to suspected denial-of-service attacks.</p>
+            </header>
+            <div class="detail-award detail-award-ddos">
+                <img src="assets/images/ddos-project-team.jpg" alt="Soham and the final-year project team with their DDoS project books">
+                <div><p class="eyebrow">RESEARCH PAPER</p><h3>Packet-level monitoring and response</h3><p>The project combines a Flask dashboard with packet capture and statistical traffic checks. The published paper describes its packet flow, detection approach, and performance evaluation.</p><a class="button button-secondary" href="https://drive.google.com/file/d/1LNoH1oU5yZiKgx4cMhxB7-ZtVU9KcyK2/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read the IJCRT paper <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">01 / TRAFFIC TO RESPONSE</p><h3>How the system handles an event</h3></div>
+                <div class="detail-grid">
+                    <article class="detail-card"><span class="detail-number">01</span><h4>Capture and monitor</h4><p>WinDivert captures incoming and outgoing packets. The monitoring layer records source and destination IP, TCP/UDP/ICMP protocol, packets per source over a sliding time window, and total packets per second.</p></article>
+                    <article class="detail-card"><span class="detail-number">02</span><h4>Build a baseline</h4><p>The system tracks normal packet volume over time and watches for sudden changes. Per-source packet rates help separate a busy address from unusual request bursts.</p></article>
+                    <article class="detail-card"><span class="detail-number">03</span><h4>Check for anomalies</h4><p>Threshold checks flag a source when its packet rate exceeds a set limit. Z-score analysis checks whether traffic differs sharply from the current baseline, helping identify distributed spikes that can evade a single fixed limit.</p></article>
+                    <article class="detail-card"><span class="detail-number">04</span><h4>Mitigate and log</h4><p>Suspicious packets are dropped, the source IP is added to a block list, and later requests can receive HTTP 403. The dashboard updates blocked-source counts and recent event records.</p></article>
+                    <article class="detail-card"><span class="detail-number">05</span><h4>Test the flow</h4><p>The development workflow moves from setup and configuration to controlled traffic testing with <code>simulate_attack.py</code>, then to live detection and response.</p></article>
+                    <article class="detail-card"><span class="detail-number">06</span><h4>Review live activity</h4><p>The Nexus Dashboard shows requests per minute in a Chart.js graph, the number of blocked targets, and an incident log with time, source address, attack label, and action status. A security feed provides additional context for operators.</p></article>
+                    <article class="detail-card"><span class="detail-number">07</span><h4>Attack patterns covered</h4><p>Traffic patterns include volume-based UDP and ICMP floods as well as application-level HTTP floods and Slowloris-style slow requests. Combining packet-rate limits with baseline statistics avoids depending on a fixed rate limit alone.</p></article>
+                    <article class="detail-card"><span class="detail-number">08</span><h4>Designed for fast response</h4><p>The report describes quick detection and low response delay compared with signature-only firewalls. Immediate filtering is intended to reduce load on the protected service while keeping ordinary traffic flowing.</p></article>
+                </div>
+            </div>
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">02 / DESIGN &amp; TECH STACK</p><h3>Lightweight web app, packet capture, and statistics</h3></div>
+                <div class="detail-grid detail-stack-grid">
+                    <article class="detail-card"><h4>Web app and data</h4><div class="detail-tags"><span>Python</span><span>Flask</span><span>SQLite</span><span>Flask-SQLAlchemy</span><span>HTML5</span><span>Tailwind CSS</span><span>Chart.js</span></div><p>The Flask service supports operator sign-in, the monitoring dashboard, event logs, and system status.</p></article>
+                    <article class="detail-card"><h4>Packet and traffic analysis</h4><div class="detail-tags"><span>WinDivert</span><span>TCP</span><span>UDP</span><span>ICMP</span><span>Sliding time window</span><span>Threshold rate check</span><span>Z-score</span><span>Hash map</span></div><p>Source addresses are tracked in a hash map. For a time window <em>t</em>, the source rate is its packet count divided by <em>t</em>; a rate above threshold <em>T</em> is flagged. The stated processing cost is O(n) time for n packets and O(k) space for k active source IPs.</p></article>
+                    <article class="detail-card"><h4>Operator controls</h4><div class="detail-tags"><span>Operator ID</span><span>Access Cipher</span><span>Live telemetry</span><span>Incident log</span><span>IP block list</span></div><p>The Nexus Authentication screen opens the operator session. Suspicious activity is visible alongside recent traffic and mitigation actions.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-detail other-projects" id="other-projects" aria-labelledby="other-projects-title">
+            <header class="detail-heading">
+                <p class="project-kicker">MORE BUILDS · EXPLORATIONS</p>
+                <h2 id="other-projects-title">Other projects</h2>
+                <p>Smaller applications and experiments live here, keeping the homepage focused on the main work.</p>
+            </header>
+            <div class="detail-grid small-project-grid">
+                <article class="detail-card"><p class="project-kicker">COMPUTER VISION</p><h3>PlantLensAI</h3><p>A plant disease classifier paired with a web interface for trying image predictions.</p><div class="detail-tags"><span>TensorFlow</span><span>Computer Vision</span><span>React</span></div><a class="text-link" href="https://github.com/sohamrane10/PlantLens.ai" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></article>
+                <article class="detail-card"><p class="project-kicker">MACHINE LEARNING</p><h3>Online Transaction Fraud Detection</h3><p>A classification workflow for finding suspicious transactions and checking results with precision, recall, F1, and ROC-AUC.</p><img class="small-project-image" src="Online Transaction Fraud Detection.png" alt="Online transaction fraud detection project visualization"><a class="text-link" href="https://sohamrane10.github.io/OnlineTransactionFraudDetection/" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a></article>
+                <article class="detail-card"><p class="project-kicker">DATA SCIENCE · R</p><h3>Social Network Analysis</h3><p>Network graphs, centrality and hub scores, and community detection to explore connections and influential nodes.</p><img class="small-project-image" src="Social Network Analysis.png" alt="Social network analysis graph"><a class="text-link" href="https://sohamrane10.github.io/Social-Network-Analysis/" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a></article>
+                <article class="detail-card"><p class="project-kicker">MACHINE LEARNING</p><h3>Iris Flower Classification</h3><p>A small machine-learning experiment that classifies Iris flowers from measured features.</p><div class="detail-tags"><span>scikit-learn</span><span>Classification</span></div><a class="text-link" href="https://sohamrane10.github.io/IrisFlowerClassification/" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a></article>
+                <article class="detail-card"><p class="project-kicker">WEB DEVELOPMENT</p><h3>Tic-Tac-Toe</h3><p>A simple browser game built to practice interactive user interfaces and game logic.</p><div class="detail-tags"><span>React</span><span>JavaScript</span></div><a class="text-link" href="https://sohamrane10.github.io/Tic-Tac-Toe-Game/" target="_blank" rel="noopener noreferrer">Play the game <span aria-hidden="true">↗</span></a></article>
+                <article class="detail-card"><p class="project-kicker">CLOUD · COMPUTER VISION</p><h3>Azure Computer Vision</h3><p>A guided computer-vision project using Microsoft Azure services.</p><div class="detail-tags"><span>Azure</span><span>Computer Vision</span></div><a class="text-link" href="assets/certificates/azure-computer-vision-project.pdf" target="_blank" rel="noopener noreferrer">View project certificate <span aria-hidden="true">↗</span></a></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer projects-footer">
+        <a class="wordmark" href="index.html">SR<span>.</span></a>
+        <p>Designed and built with care by Soham Rane · <span>2026</span></p>
+        <a href="achievements.html">Achievements &amp; certificates</a>
+        <a href="index.html#home">Back to home ↑</a>
+    </footer>
+</body>
 </html>
