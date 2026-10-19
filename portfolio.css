@@ -195,7 +195,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
 .hero-metrics {
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-top: clamp(46px, 7vw, 88px);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
@@ -249,6 +249,8 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
 
 .timeline { border-top: 1px solid var(--line); }
 .timeline-item { display: grid; grid-template-columns: .72fr 1.6fr; gap: 45px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.timeline-item-featured { grid-template-columns: minmax(145px, .45fr) .72fr 1.6fr; align-items: start; }
+.experience-photo { width: 100%; height: 180px; border: 1px solid var(--line); object-fit: cover; object-position: center 28%; }
 .timeline-meta { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-size: 12px; }
 .timeline-meta span + span { color: var(--quiet); }
 .timeline-content h3, .education-card h3, .project-card h3, .achievement-card h3, .credential-card h3 { margin: 0 0 12px; font-size: 19px; font-weight: 600; line-height: 1.35; }
@@ -261,6 +263,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
 .project-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
 .project-card:hover { border-color: var(--quiet); }
 .project-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.15fr; }
+.project-with-image { display: grid; grid-template-columns: 1fr 1.15fr; }
 .project-image { min-height: 100%; background: var(--surface-raised); }
 .project-image img { width: 100%; height: 100%; min-height: 330px; object-fit: cover; object-position: center 42%; }
 .project-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: clamp(22px, 3vw, 34px); }
@@ -280,7 +283,9 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
 
 .achievement-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .achievement-card { display: grid; grid-template-columns: 125px 1fr; min-height: 150px; align-items: center; gap: 20px; border: 1px solid var(--line); padding: 18px; background: var(--surface); }
+.achievement-card.achievement-featured { grid-column: 1 / -1; grid-template-columns: minmax(180px, 260px) 1fr; }
 .achievement-card > img { width: 125px; height: 120px; border: 1px solid var(--line); object-fit: cover; }
+.achievement-card.achievement-featured > img { width: 100%; height: 180px; }
 .achievement-card h3 { margin: 6px 0; font-size: 17px; }
 .achievement-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .achievement-label { color: var(--quiet); font-size: 8px; }
@@ -288,6 +293,48 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
 .achievement-number { align-self: start; color: var(--quiet); font-family: Manrope, sans-serif; font-size: 27px; font-weight: 600; }
 .badge-row { display: flex; gap: 10px; margin-top: 13px; }
 .badge-row img { width: 75px; height: 75px; border: 1px solid var(--line); object-fit: contain; }
+.archive-link { margin-top: 22px; }
+
+.archive-header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    min-height: 78px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 76%, transparent);
+    padding: 12px clamp(20px, 5vw, 76px);
+    background: var(--header-bg);
+    backdrop-filter: blur(18px);
+}
+.archive-header-links { display: flex; flex-wrap: wrap; gap: 22px; }
+.archive-header-links a { color: var(--muted); font-size: 12px; font-weight: 600; }
+.archive-header-links a:hover { color: var(--text); }
+.archive-main { padding-top: 76px; padding-bottom: 70px; }
+.archive-intro { max-width: 760px; margin-bottom: 35px; }
+.archive-intro h1 { margin: 17px 0; font-size: clamp(40px, 6.5vw, 74px); font-weight: 600; line-height: 1.05; }
+.archive-intro > p:last-child { max-width: 600px; margin-bottom: 0; color: var(--muted); }
+.archive-nav { display: flex; flex-wrap: wrap; gap: 8px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 0; }
+.archive-nav a { border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; color: var(--muted); font-size: 11px; font-weight: 600; }
+.archive-nav a:hover { border-color: var(--text); color: var(--text); }
+.archive-section { padding-top: 76px; scroll-margin-top: 96px; }
+.archive-section-heading { margin-bottom: 23px; }
+.archive-section-heading h2 { margin: 9px 0 0; font-size: clamp(25px, 3.5vw, 38px); font-weight: 600; line-height: 1.2; }
+.certificate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.certificate-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.certificate-thumb { display: block; width: 100%; height: 158px; border: 0; border-bottom: 1px solid var(--line); background: #fff; object-fit: contain; }
+.certificate-pdf-thumb { pointer-events: none; }
+.certificate-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 17px; }
+.certificate-copy .project-kicker { margin-bottom: 7px; }
+.certificate-copy h3 { margin: 0 0 7px; font-size: 16px; font-weight: 600; line-height: 1.35; }
+.certificate-copy p:not(.project-kicker) { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.certificate-copy .text-link { margin-top: 10px; font-size: 11px; }
+.certificate-button { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; margin-top: auto; border: 1px solid var(--line); padding: 0 12px; color: var(--text); font-size: 11px; font-weight: 700; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.certificate-button:hover { border-color: var(--text); background: var(--text); color: var(--bg); }
+.certificate-copy .certificate-button { margin-top: 17px; }
+.archive-footer { margin-top: 0; }
 
 .education-card { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-top: 1px solid var(--line); padding: 27px 0; }
 .education-card:last-child { border-bottom: 1px solid var(--line); }
@@ -399,6 +446,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
     .hero-visual { width: min(100%, 330px); }
     .hero-note { right: -12px; }
     .about-grid { gap: 45px; }
+    .certificate-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px) {
@@ -427,6 +475,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
     .section-block { padding-top: 92px; }
     .section-heading { margin-bottom: 33px; }
     .about-grid, .timeline-item, .project-featured, .project-grid, .achievement-grid, .credential-grid, .contact-card { grid-template-columns: 1fr; }
+    .project-with-image { grid-template-columns: 1fr; }
     .about-grid { gap: 30px; }
     .toolkit-heading { align-items: flex-start; flex-direction: column; gap: 14px; }
     .toolkit-caption { max-width: 330px; }
@@ -438,11 +487,14 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
     .tool-description { min-height: 0; }
     .timeline-item { gap: 12px; padding: 22px 0; }
     .timeline-meta { flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+    .experience-photo { width: min(100%, 280px); height: 190px; }
     .project-grid { gap: 11px; }
     .project-featured { grid-column: auto; }
     .project-image img { min-height: 240px; max-height: 280px; }
     .achievement-card { grid-template-columns: 96px 1fr; gap: 14px; padding: 13px; }
+    .achievement-card.achievement-featured { grid-column: auto; grid-template-columns: 96px 1fr; }
     .achievement-card > img { width: 96px; height: 96px; }
+    .achievement-card.achievement-featured > img { width: 96px; height: 96px; }
     .achievement-text { grid-template-columns: 38px 1fr; }
     .achievement-number { font-size: 22px; }
     .education-card { align-items: flex-start; }
@@ -451,6 +503,20 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
     .credential-card { grid-template-columns: 38px 1fr; gap: 12px; padding: 16px; }
     .credential-mark { width: 36px; height: 36px; font-size: 11px; }
     .credential-actions { gap: 13px; }
+    .archive-header { min-height: 64px; gap: 12px; padding-inline: 18px; }
+    .archive-header-links { gap: 10px; }
+    .archive-header-links a { font-size: 10px; }
+    .archive-main { padding-top: 55px; }
+    .archive-section { padding-top: 58px; }
+    .archive-nav { gap: 6px; }
+    .archive-nav a { padding: 6px 9px; font-size: 10px; }
+    .certificate-grid { grid-template-columns: 1fr; }
+    .certificate-card { display: grid; grid-template-columns: 112px 1fr; }
+    .certificate-thumb { width: 112px; height: 100%; min-height: 145px; border-right: 1px solid var(--line); border-bottom: 0; }
+    .certificate-copy { padding: 13px; }
+    .certificate-copy h3 { font-size: 14px; }
+    .certificate-copy p:not(.project-kicker) { font-size: 10px; }
+    .certificate-button { min-height: 34px; padding-inline: 9px; }
     .contact-section { padding-top: 92px; padding-bottom: 70px; }
     .contact-card { gap: 28px; padding: 25px; }
     .site-footer { flex-wrap: wrap; justify-content: space-between; padding: 22px 18px; }
