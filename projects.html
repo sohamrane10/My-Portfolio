@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#090909">
-    <meta name="description" content="A closer look at Soham Rane's AI, navigation, cybersecurity, and space-data projects.">
+    <meta name="description" content="A closer look at Soham Rane's AI, computer vision, navigation, cybersecurity, and space-data projects.">
     <title>Projects | Soham Rane</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
             <a href="index.html">Home</a>
             <a href="#project-list">Projects</a>
             <a href="achievements.html">Achievements</a>
+            <a href="football.html">Football</a>
         </nav>
     </header>
 
@@ -33,6 +34,7 @@
             <a href="#rapidreach">RapidReach · Techvanza ’26</a>
             <a href="#beyond-horizon">Beyond Horizon</a>
             <a href="#ddos">DDoS detection</a>
+            <a href="#isl-sign-language">ISL to Text/Speech</a>
             <a href="#other-projects">Other projects</a>
         </nav>
 
@@ -42,6 +44,10 @@
                 <h2 id="ross-title">Ross Warner HR Solutions</h2>
                 <p>Built and contributed to three connected products that support recruitment, internal operations, and company questions.</p>
             </header>
+            <div class="project-brief">
+                <article><p class="eyebrow">MVP / CORE PRODUCTS</p><h3>Three HR products</h3><p>Recruitment intelligence, role-based operations, and a policy-aware company assistant.</p></article>
+                <article><p class="eyebrow">USP / DISTINCTIVE VALUE</p><h3>Connected hiring workflows</h3><p>AI-assisted candidate review and job content link to structured team workflows and context-aware answers.</p></article>
+            </div>
             <div class="detail-overview">
                 <img src="assets/images/ross-internship.jpg" alt="Soham during his Ross Warner internship">
                 <div class="detail-overview-copy">
@@ -108,6 +114,10 @@
                 <h2 id="rapidreach-title">RapidReach</h2>
                 <p>A multi-input navigation tool for vague, local directions. It turns spoken, written, or visual clues into clearer address details and map locations.</p>
             </header>
+            <div class="project-brief">
+                <article><p class="eyebrow">MVP</p><h3>Turn informal directions into a usable map location</h3><p>Accept text, voice, or landmark images; normalize the address, resolve coordinates, and show the result on an interactive map.</p></article>
+                <article><p class="eyebrow">USP</p><h3>Seven ways to recover a location</h3><p>Combines multilingual directions, landmark understanding, and progressive fallbacks instead of depending on a perfect street address.</p></article>
+            </div>
             <figure class="rapidreach-collage">
                 <img src="assets/images/rapidreach-dashboard-collage.png" alt="RapidReach screens showing address normalization, multilingual voice input, location maps, and navigation">
                 <figcaption>RapidReach in action · address analysis, maps, and voice input</figcaption>
@@ -117,7 +127,7 @@
                 <div><p class="eyebrow">40+ TEAMS · 3 DOMAINS · 12+ HOUR SPRINT</p><h3>Winner in AI/ML. Third place overall.</h3><p>RapidReach won its AI/ML domain at Techvanza ’26, hosted by SVKM's Usha Pravin Gandhi College of Arts, Science &amp; Commerce, and placed third overall.</p></div>
             </div>
             <div class="detail-block">
-                <div class="detail-block-heading"><p class="eyebrow">01 / HOW IT WORKS</p><h3>From local clues to a map point</h3></div>
+                <div class="detail-block-heading"><p class="eyebrow">01 / FEATURES</p><h3>From local clues to a map point</h3></div>
                 <div class="detail-grid">
                     <article class="detail-card"><span class="detail-number">A</span><h4>Address cleanup</h4><p>NLTK prepares informal directions; Llama 3.3 identifies suburbs, streets, house or building names, landmarks, and direction phrases such as “behind” or “opposite.” The result is organized into a clear JSON address.</p></article>
                     <article class="detail-card"><span class="detail-number">B</span><h4>Landmark image reading</h4><p>Users can add a photo of a shop, sign, or nearby landmark. The vision flow reads visible names and numbers, then checks them against business listings and OpenStreetMap points of interest.</p></article>
@@ -151,8 +161,12 @@
                 <h2 id="beyond-title">Beyond Horizon</h2>
                 <p>A space and Earth intelligence platform that brings live science data, satellite and sensor readings, 3D views, and AI into one installable learning workspace.</p>
             </header>
+            <div class="project-brief">
+                <article><p class="eyebrow">MVP</p><h3>One live space and Earth dashboard</h3><p>Unifies satellite positions, launches, space weather, sky events, Earth observations, sensors, and learning in an installable web app.</p></article>
+                <article><p class="eyebrow">USP</p><h3>Science data meets local context</h3><p>Pairs live public science feeds with local sensor readings, interactive 3D views, AI assistance, and gamified STEM learning.</p></article>
+            </div>
             <div class="detail-block">
-                <div class="detail-block-heading"><p class="eyebrow">01 / PLATFORM</p><h3>One view across sky, Earth, and learning</h3></div>
+                <div class="detail-block-heading"><p class="eyebrow">01 / FEATURES</p><h3>One view across sky, Earth, and learning</h3></div>
                 <div class="detail-grid">
                     <article class="detail-card"><span class="detail-number">01</span><h4>Live dashboard</h4><p>Combines ISS position and track, solar-weather alerts, launch countdowns, local sky conditions, and learning progress. Browser location and OpenStreetMap Nominatim help resolve a user's coordinates to a city, town, or suburb.</p></article>
                     <article class="detail-card"><span class="detail-number">02</span><h4>Earth intelligence</h4><p>D3.js and Canvas animate landmass data. NASA SMAP soil moisture and Sentinel-2 NDVI support regional flood-risk and crop-stress views. NASA EONET provides disaster locations, while NASA GIBS adds layers such as active fires and night lights.</p></article>
@@ -196,12 +210,16 @@
                 <h2 id="ddos-title">Real-Time DDoS Detection &amp; Response</h2>
                 <p>An open-source, real-time traffic monitoring system that uses packet-level statistics to flag unusual traffic and respond to suspected denial-of-service attacks.</p>
             </header>
+            <div class="project-brief">
+                <article><p class="eyebrow">MVP</p><h3>Capture, assess, and respond to traffic</h3><p>Monitor packets, detect unusual source rates, block suspicious traffic, and record events in an operator dashboard.</p></article>
+                <article><p class="eyebrow">USP</p><h3>Thresholds plus baseline statistics</h3><p>Pairs per-IP rate checks with Z-score analysis, using lightweight packet tracking and immediate mitigation rather than fixed rate limiting alone.</p></article>
+            </div>
             <div class="detail-award detail-award-ddos">
                 <img src="assets/images/ddos-project-team.jpg" alt="Soham and the final-year project team with their DDoS project books">
                 <div><p class="eyebrow">RESEARCH PAPER</p><h3>Packet-level monitoring and response</h3><p>The project combines a Flask dashboard with packet capture and statistical traffic checks. The published paper describes its packet flow, detection approach, and performance evaluation.</p><a class="button button-secondary" href="https://drive.google.com/file/d/1LNoH1oU5yZiKgx4cMhxB7-ZtVU9KcyK2/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read the IJCRT paper <span aria-hidden="true">↗</span></a></div>
             </div>
             <div class="detail-block">
-                <div class="detail-block-heading"><p class="eyebrow">01 / TRAFFIC TO RESPONSE</p><h3>How the system handles an event</h3></div>
+                <div class="detail-block-heading"><p class="eyebrow">01 / FEATURES</p><h3>How the system handles an event</h3></div>
                 <div class="detail-grid">
                     <article class="detail-card"><span class="detail-number">01</span><h4>Capture and monitor</h4><p>WinDivert captures incoming and outgoing packets. The monitoring layer records source and destination IP, TCP/UDP/ICMP protocol, packets per source over a sliding time window, and total packets per second.</p></article>
                     <article class="detail-card"><span class="detail-number">02</span><h4>Build a baseline</h4><p>The system tracks normal packet volume over time and watches for sudden changes. Per-source packet rates help separate a busy address from unusual request bursts.</p></article>
@@ -220,6 +238,58 @@
                     <article class="detail-card"><h4>Packet and traffic analysis</h4><div class="detail-tags"><span>WinDivert</span><span>TCP</span><span>UDP</span><span>ICMP</span><span>Sliding time window</span><span>Threshold rate check</span><span>Z-score</span><span>Hash map</span></div><p>Source addresses are tracked in a hash map. For a time window <em>t</em>, the source rate is its packet count divided by <em>t</em>; a rate above threshold <em>T</em> is flagged. The stated processing cost is O(n) time for n packets and O(k) space for k active source IPs.</p></article>
                     <article class="detail-card"><h4>Operator controls</h4><div class="detail-tags"><span>Operator ID</span><span>Access Cipher</span><span>Live telemetry</span><span>Incident log</span><span>IP block list</span></div><p>The Nexus Authentication screen opens the operator session. Suspicious activity is visible alongside recent traffic and mitigation actions.</p></article>
                 </div>
+            </div>
+        </section>
+
+        <section class="project-detail" id="isl-sign-language" aria-labelledby="isl-title">
+            <header class="detail-heading">
+                <p class="project-kicker">THIRD-YEAR MINI PROJECT · COMPUTER VISION · ASSISTIVE TECHNOLOGY</p>
+                <h2 id="isl-title">Indian Sign Language to Text/Speech</h2>
+                <p>A webcam-based gesture recognition prototype that translates a small set of Indian Sign Language gestures into on-screen text and spoken output. Developed with Vivek Rajak, Mandar Salvi, and Vansh Wase under Prof. Deepti Janjani.</p>
+            </header>
+            <div class="project-brief">
+                <article><p class="eyebrow">MVP</p><h3>Recognize a gesture and communicate it</h3><p>Capture a hand gesture from a standard webcam, classify it, display the recognized label, and speak the result aloud.</p></article>
+                <article><p class="eyebrow">USP</p><h3>Accessible with common hardware</h3><p>Combines live gesture-to-text and speech output with an offline speech option, using a standard webcam rather than specialized equipment.</p></article>
+            </div>
+
+            <div class="isl-media-gallery" aria-label="Indian Sign Language project images">
+                <figure class="isl-team-photo">
+                    <img src="assets/images/isl-project-team.jpg" alt="Soham Rane with two project teammates">
+                    <figcaption>Third-year project team</figcaption>
+                </figure>
+                <figure><img src="assets/images/isl-project-dashboard.jpeg" alt="ISL gesture detection project dashboard"><figcaption>Project dashboard</figcaption></figure>
+                <figure><img src="assets/images/isl-detection-interface.jpeg" alt="Webcam detection view with hand placement guide"><figcaption>Webcam detection view</figcaption></figure>
+                <figure><img src="assets/images/isl-gesture-result.jpeg" alt="Detected hand gesture with landmark points, bounding box, and predicted text"><figcaption>Gesture recognition result</figcaption></figure>
+                <figure><img src="assets/images/isl-data-collection.jpeg" alt="Python data collection script and webcam region used to gather gesture samples"><figcaption>Gesture data collection</figcaption></figure>
+            </div>
+
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">01 / FEATURES &amp; WORKFLOW</p><h3>From webcam frame to voice</h3></div>
+                <div class="detail-grid">
+                    <article class="detail-card"><span class="detail-number">01</span><h4>Live gesture input</h4><p>The React interface uses a webcam feed. It captures frames and sends them to the Flask API for processing and prediction.</p></article>
+                    <article class="detail-card"><span class="detail-number">02</span><h4>Image preparation</h4><p>OpenCV converts each frame from BGR to RGB, resizes it to 64×64 or 128×128, and applies Gaussian blur to reduce camera noise. Contour detection, background subtraction, and Sobel or Canny edges are optional processing steps.</p></article>
+                    <article class="detail-card"><span class="detail-number">03</span><h4>Gesture classification</h4><p>The report describes a scikit-learn Random Forest classifier with 100 trees. Preprocessed pixels become a one-dimensional feature vector; the predicted label is returned to the interface.</p></article>
+                    <article class="detail-card"><span class="detail-number">04</span><h4>Text and speech output</h4><p>Recognized gestures appear as text and can be spoken with pyttsx3 for offline use or gTTS for online speech. The audio is played through playsound.</p></article>
+                    <article class="detail-card"><span class="detail-number">05</span><h4>Collect and train data</h4><p>A custom OpenCV script displays a 300×300 region of interest. Keyboard input captures, converts, resizes, and saves gesture samples into labeled folders for model training.</p></article>
+                    <article class="detail-card"><span class="detail-number">06</span><h4>Clear visual feedback</h4><p>The dark interface uses orange accents and a hand-placement guide. During detection, hand landmarks are drawn with red points and white connecting lines, with a green bounding box, predicted label, and confidence value. Controls start detection or clear the displayed letters.</p></article>
+                    <article class="detail-card detail-card-wide"><span class="detail-number">DATASET &amp; REPORTED RESULTS</span><h4>Five gestures · about 1,800 samples</h4><p>The reported classes are A and B (300 images each), plus Hello, Yes, and No (400 each). The report describes flip, rotation, zoom, and brightness augmentation, an 80/20 train/test split, and about 92% test accuracy for this known gesture set. It reports typical processing below one second per frame.</p><div class="detail-tags"><span>A · 300</span><span>B · 300</span><span>Hello · 400</span><span>Yes · 400</span><span>No · 400</span><span>~92% reported test accuracy</span></div></article>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <div class="detail-block-heading"><p class="eyebrow">02 / TECH STACK</p><h3>Web app, vision, model, and speech</h3></div>
+                <div class="detail-grid detail-stack-grid">
+                    <article class="detail-card"><h4>Frontend and webcam</h4><div class="detail-tags"><span>React.js</span><span>react-webcam</span><span>HTML</span><span>CSS</span><span>Base64 frame upload</span></div><p>The browser captures camera frames and sends them to the backend using repeated POST requests.</p></article>
+                    <article class="detail-card"><h4>Backend and computer vision</h4><div class="detail-tags"><span>Python 3.8+</span><span>Flask REST API</span><span>OpenCV</span><span>NumPy</span><span>Pandas</span></div><p>Flask receives frames, runs preprocessing and classification, then returns the recognized gesture for display and speech.</p></article>
+                    <article class="detail-card"><h4>Model and speech</h4><div class="detail-tags"><span>scikit-learn</span><span>RandomForestClassifier</span><span>pyttsx3</span><span>gTTS</span><span>playsound</span></div><p>The documented classifier uses 100 estimators. Speech can run offline with pyttsx3 or use the online Google Text-to-Speech service.</p></article>
+                    <article class="detail-card"><h4>Development and hardware</h4><div class="detail-tags"><span>VS Code</span><span>Jupyter Notebook</span><span>4 GB RAM minimum</span><span>8 GB recommended</span><span>Standard webcam</span></div><p>The report targets Windows 10, Linux, or macOS and Chrome, Firefox, or Edge. It requires no specialized camera or glove.</p></article>
+                </div>
+            </div>
+
+            <div class="detail-document">
+                <div><p class="eyebrow">03 / PROJECT REPORT</p><h3>Third-year project report</h3><p>Full report covering the literature survey, system design, implementation, results, and future scope.</p></div>
+                <iframe class="document-preview" src="assets/reports/indian-sign-language-to-text-speech-report.pdf#toolbar=0&amp;navpanes=0" title="Indian Sign Language to Text and Speech project report" loading="lazy"></iframe>
+                <a class="button button-secondary" href="assets/reports/indian-sign-language-to-text-speech-report.pdf" target="_blank" rel="noopener noreferrer">Open full report <span aria-hidden="true">↗</span></a>
             </div>
         </section>
 
@@ -244,6 +314,7 @@
         <a class="wordmark" href="index.html">SR<span>.</span></a>
         <p>Designed and built with care by Soham Rane · <span>2026</span></p>
         <a href="achievements.html">Achievements &amp; certificates</a>
+        <a href="football.html">Football</a>
         <a href="index.html#home">Back to home ↑</a>
     </footer>
 </body>
