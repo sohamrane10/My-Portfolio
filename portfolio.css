@@ -421,6 +421,19 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
 .archive-section-heading { margin-bottom: 23px; }
 .archive-section-heading h2 { margin: 9px 0 0; font-size: clamp(25px, 3.5vw, 38px); font-weight: 600; line-height: 1.2; }
 .certificate-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.badge-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+.badge-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--line); }
+.badge-image, .badge-preview { display: grid; width: 100%; height: 170px; place-items: center; object-fit: contain; }
+.badge-preview { align-content: center; gap: 4px; background: var(--surface); color: var(--text); text-align: center; }
+.badge-preview-google span { color: var(--muted); font-size: 16px; font-weight: 700; }
+.badge-preview-google strong { font-family: Manrope, sans-serif; font-size: 25px; letter-spacing: -.05em; }
+.badge-preview-google small { color: var(--quiet); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.badge-copy { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 17px; }
+.badge-copy h3 { margin: 0 0 7px; font-size: 16px; font-weight: 600; line-height: 1.35; }
+.badge-copy p:not(.project-kicker) { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.badge-copy .text-link { margin-top: 10px; font-size: 11px; }
+.badge-copy .certificate-button { margin-top: auto; }
+.badge-copy .certificate-button + .certificate-button { margin-top: 10px; }
 .certificate-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
 .certificate-card { background: transparent; }
 .certificate-thumb { display: block; width: 100%; height: 158px; border: 0; background: transparent; object-fit: contain; }
@@ -618,6 +631,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
     .credential-card { grid-template-columns: 38px 1fr; gap: 12px; padding: 16px; }
     .credential-mark { width: 36px; height: 36px; font-size: 11px; }
     .credential-actions { gap: 13px; }
+    .badge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .archive-header { min-height: 64px; gap: 12px; padding-inline: 18px; }
     .archive-header-links { gap: 10px; }
     .archive-header-links a { font-size: 10px; }
@@ -649,6 +663,7 @@ h1, h2, h3 { font-family: Manrope, sans-serif; letter-spacing: -.055em; }
     .archive-nav { gap: 6px; }
     .archive-nav a { padding: 6px 9px; font-size: 10px; }
     .certificate-grid { grid-template-columns: 1fr; }
+    .badge-grid { grid-template-columns: 1fr; }
     .certificate-card { display: grid; grid-template-columns: 112px 1fr; }
     .certificate-thumb { width: 112px; height: 100%; min-height: 145px; border: 0; }
     .certificate-copy { padding: 13px; }
